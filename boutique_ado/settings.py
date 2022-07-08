@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 
 SITE_ID = 1
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-mattcooperd-boutiqueado-avge51mke97.ws-eu51.gitpod.io']
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -52,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
