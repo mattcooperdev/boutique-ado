@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 SITE_ID = 1
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-mattcooperd-boutiqueado-avge51mke97.ws-eu53.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-mattcooperd-boutiqueado-avge51mke97.ws-eu54.gitpod.io']
 
 # Application definition
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -62,6 +63,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'boutique_ado.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -77,8 +80,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
