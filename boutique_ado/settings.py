@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -104,6 +105,12 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': dj_database_url.parse('postgres://limzgiseaekuvq:ac9e0ebc48e81a83ef25396199c061ebc8cc5c5c8ed2bbc92f2d09133f913990@ec2-54-77-40-202.eu-west-1.compute.amazonaws.com:5432/d3jrdkgl2792nk')
+# }
+
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
